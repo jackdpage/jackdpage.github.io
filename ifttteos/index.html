@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Controlling Eos with IFTTT</title>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+</head>
+<body>
+<h1>Controlling Eos with IFTTT</h1>
+
+<h2>Information Flow</h2>
+<ol>
+  <li>User makes command to Google Assistant</li>
+  <li>IFTTT captures Google Assistant command and sends in a Pushbullet notification to an attached account</li>
+  <li><code>push2eos.sh</code> fetches most recent Pushbullet notification using Pushbullet API</li>
+  <li><code>push2eos.sh</code> translates command to an OSC message using <code>translations.csv</code></li>
+  <li><code>sendosc.py</code> sends OSC message to Eos</li>
+</ol>
+
+<h2>Setup</h2>
+
+<h3>IFTTT</h3>
+<ul>
+  <li>Connect your Pushbullet and Google accounts to your IFTTT account</li>
+  <li>Enable the <a href="https://ifttt.com/applets/69397506d-tell-eos-to-do-something-via-pushbullet-and-custom-osc-translator">applet</a></li>
+</ul>
+
+<h3>Pushbullet</h3>
+<ul>
+  <li>Get your access token from <code>Settings &gt; Account &gt; Access Tokens &gt; Create Access Token</code></li>
+</ul>
+</h3>
+
+<h3><code>push2eos.sh</code></h3>
+<ul>
+  <li>Paste your Pushbullet access token into the cURL command after <code>Access-Token:</code></li>
+</ul>
+
+<h3><code>translations.csv</code></h3>
+<ul>
+  <li>Define your commands and their OSC translations in CSV format. Commands must be in uppercase.</li>
+</ul>
+
+<h3><code>sendosc.py</code></h3>
+<ul>
+  <li>Set the IP address and OSC receive port of your console</li>
+</ul>
+
+<h2>Links</h2>
+
+<ul>
+  <li><a href="https://raw.githubusercontent.com/jackdpage/jackdpage.github.io/master/ifttteos/push2eos.sh">push2eos.sh</a></li>
+  <li><a href="https://raw.githubusercontent.com/jackdpage/jackdpage.github.io/master/ifttteos/translations.csv">translations.csv</a></li>
+  <li><a href="https://raw.githubusercontent.com/jackdpage/jackdpage.github.io/master/ifttteos/sendosc.py">sendosc.py</a></li>
+</ul>
+
+</body>
+</html>
