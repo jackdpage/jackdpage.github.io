@@ -34,7 +34,5 @@ written in parentheses, for example `( 1 + 2 ) + ( 3 + 4 )` selects two
 subgroups of two fixtures each. You cannot have a subgroup within a subgroup.
 To populate the command line with parentheses, type __[Shift]__ + __[/]__.
 
-### Further reading
-
+### Related
 - [Offset](offset.html)
-- [Groups (tab)](../tab/17.html)

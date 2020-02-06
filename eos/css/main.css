@@ -11,9 +11,15 @@
    ========================================================================== */
 
 html {
-    color: #222;
+	background-color: Black;
+    color: #a59baa;
     font-size: 1em;
     line-height: 1.4;
+}
+
+body {
+	margin: auto;
+	width: 90%;
 }
 
 /*
@@ -113,23 +119,27 @@ textarea {
 
 .tabs-container {
 	background-color: Black;
-	width: 100%;
 	border-color: #484452;
 	border-width: 2px;
 	border-style: solid;
 	border-radius: 2px;
 	text-align: center;
 	margin: 0 auto 0 auto;
+	padding: 16px;
 }
 
 .tabs-list-row {
 	padding: 0 0 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .tabs-list-row .tab {
 	display: inline-block;
 	position: relative;
 	text-align: center;
+	margin: 2px;
 }
 
 .tab .tab-ref {
@@ -158,6 +168,30 @@ textarea {
 	visibility: visible;
 }
 
+/* Topics list */
+
+.topics-list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap
+}
+
+.topics-list a .topic {
+	background-color: #0f1923;
+	border-color: #474251;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	color: #a59baa;
+	display: inline-block;
+	margin: 5px;
+	padding: 8px 35px;
+}
+
+.topics-list a .topic:hover {
+	border-color: #c78b07;
+}
 
 
 
